@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=sotinyurl
+POSTGRES_USER=CGIFFtcYvYFtgWvFjNhrWGtSXkWoIgxf
+POSTGRES_PASSWORD=9M9Lo6XzgR0R8m1Jm7BvMVYeqFkLqG7OizyzSf3zBPObVW0cUwuLSW5BjutaUPAe
