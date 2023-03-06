@@ -1,6 +1,6 @@
 # sotinyurl
 
-ExampleProject. Base api to tiny your urls.
+Tiny your URL 
 
 [![Built with Cookiecutter Django](https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter)](https://github.com/cookiecutter/cookiecutter-django/)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
@@ -10,6 +10,33 @@ ExampleProject. Base api to tiny your urls.
 Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings.html).
 
 ## Basic Commands
+
+Use below command with **sudo** if needed
+
+- **make dev** create local dev server up and running at http://127.0.0.1:8000
+- **make build** build/rebuild docker images/containers
+- **make migrations** create Django migration files
+- **make migrate** execute migration files on database
+- **make seed** build local environment + create base data admin user (admin@admin) + 10000 random tiny urls
+- **make superuser** create superuser with access to admin panel at http://127.0.0.1:8000/admin/
+- **make shell** run django container with shell (python manage.py shell)
+- **make cleardocker** Removes installed images/containers/volumes
+
+## Prefered way to start local enironment
+
+1. clone repo
+2. run `make seed` or `sudo make seed` if needed
+3. run `make dev` or `sudo make dev`
+
+
+## Local Urls
+- http://127.0.0.1:8000/api/docs/ - swagger API schema
+- / - base url will redirect or display error msg. See **sotinyurl.tinyurls.views.catch_tiny_url_view
+
+
+[App Changelog](/CHANGELOG.md)
+
+---
 
 ### Setting Up Your Users
 
