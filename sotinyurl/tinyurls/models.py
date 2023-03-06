@@ -53,6 +53,19 @@ class TinyUrl(CommonModel):
     def __tiny_url_already_exists(self, url_to_check: str) -> bool:
         return TinyUrl.objects.filter(tiny_url=url_to_check).exists()
 
+    def get_redirect_to(self, slug):
+        tiny_url = f"{settings.DOMAIN_URL}/{slug}"
+        redirect_to = None
+        try:
+            obj = TinyUrl.objects.get(
+                tiny_url=tiny_url,
+                valid_to__gte=now()
+            )
+            redirect_to = obj.redirect_to
+        except TinyUrl.DoesNotExist:
+            pass
+        
+        return redirect_to
 
     def save(self, *args, **kwargs) -> None:
         if self.is_being_created:
