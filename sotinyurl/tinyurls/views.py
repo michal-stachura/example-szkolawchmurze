@@ -13,6 +13,6 @@ class TinyUrlViewSet(
     GenericViewSet,
     ListModelMixin
 ):
-    
     queryset = TinyUrl.objects.all()
     serializer_class = TinyUrlSerializer
+

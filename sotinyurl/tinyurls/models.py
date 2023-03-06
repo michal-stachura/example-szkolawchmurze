@@ -8,7 +8,6 @@ from sotinyurl.utils.common_model import CommonModel
 from django.utils.translation import gettext as _
 from django.contrib.auth import get_user_model
 
-
 User = get_user_model()
 
 class TinyUrl(CommonModel):
