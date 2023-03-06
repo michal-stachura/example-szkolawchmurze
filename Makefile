@@ -21,8 +21,5 @@ superuser:
 shell:
 	docker-compose -p sotiny -f local.yml run --rm django python manage.py shell
 
-bash:
-	docker-compose -p sotiny -f local.yml exec celeryworker bash
-
 cleardocker:
 	docker-compose -p sotiny -f local.yml down --volumes --remove-orphans --rmi all
