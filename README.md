@@ -34,6 +34,8 @@ Use below command with **sudo** if needed
 - / - base url will redirect or display error msg. See **sotinyurl.tinyurls.views.catch_tiny_url_view
 
 
+[App Changelog](/CHANGELOG.md)
+
 ---
 
 ### Setting Up Your Users
