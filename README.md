@@ -21,6 +21,7 @@ Use below command with **sudo** if needed
 - **make superuser** create superuser with access to admin panel at http://127.0.0.1:8000/admin/
 - **make shell** run django container with shell (python manage.py shell)
 - **make cleardocker** Removes installed images/containers/volumes
+- **make test** run pytests
 
 ## Prefered way to start local enironment
 
@@ -29,7 +30,7 @@ Use below command with **sudo** if needed
 3. run `make dev` or `sudo make dev`
 
 
-## Local Urls
+## Main Urls
 - http://127.0.0.1:8000/api/docs/ - swagger API schema
 - / - base url will redirect or display error msg. See **sotinyurl.tinyurls.views.catch_tiny_url_view
 

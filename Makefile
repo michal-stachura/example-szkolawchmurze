@@ -23,3 +23,6 @@ shell:
 
 cleardocker:
 	docker-compose -p sotiny -f local.yml down --volumes --remove-orphans --rmi all
+
+test:
+	docker-compose -p sotiny -f local.yml run --rm django pytest -x
