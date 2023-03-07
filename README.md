@@ -31,7 +31,7 @@ Use below command with **sudo** if needed
 
 
 ## Main Urls
-- http://127.0.0.1:8000/api/docs/ - swagger API schema
+- http://127.0.0.1:8000/api/docs/ - swagger API schema (403 for not logged users)
 - / - base url will redirect or display error msg. See **sotinyurl.tinyurls.views.catch_tiny_url_view
 
 
