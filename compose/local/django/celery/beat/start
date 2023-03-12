@@ -5,4 +5,5 @@ set -o nounset
 
 
 rm -f './celerybeat.pid'
-exec watchfiles celery.__main__.main --args '-A config.celery_app beat -l INFO'
+# exec watchfiles celery.__main__.main --args '-A config.celery_app beat -l INFO'
+exec celery -A config.celery_app beat -l INFO -f logs/celery-beat.log
