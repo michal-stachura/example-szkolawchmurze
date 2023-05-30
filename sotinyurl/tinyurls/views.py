@@ -28,7 +28,7 @@ class TinyUrlViewSet(
         if self.action in ["retrieve", "create"]:
             return TinyUrlDetailSerializer
         return TinyUrlSerializer
-    
+
     def get_permissions(self):
         if self.action == "create":
             permission_classes = [AllowAny]
@@ -41,5 +41,4 @@ def catch_tiny_url_view(request, slug):
     redirect_to = TinyUrl().get_redirect_to(slug)
     if redirect_to:
         return redirect(redirect_to)
-    return HttpResponse(_(f"This tiny url does not exists or is overdue."))
-    
+    return HttpResponse(_(f"This tiny url does not exists or is overdue"))
